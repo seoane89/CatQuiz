@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android" >
+    <!-- Thanks to "All for Android, Android for All" for the great tutorial -->
+    <!-- https://www.ssaurel.com/blog/how-to-create-a-layout-with-rounded-corner-borders-in-android/-->
+
+    <!-- we define background color -->
+    <solid android:color="#ccffffff" />
+
+    <!-- we define border color and thick -->
+    <stroke
+        android:width="0dp"
+        android:color="#ffffff" />
+
+    <!-- add some padding for text inside -->
+    <padding
+        android:bottom="10dp"
+        android:left="10dp"
+        android:right="10dp"
+        android:top="10dp" />
+
+    <!-- we define corner radius, note that radius can be different for each corner -->
+    <corners android:radius="8dp" />
+
+</shape>
