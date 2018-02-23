@@ -25,7 +25,7 @@ public class Question1Activity extends AppCompatActivity {
         name = bundle.getString(NAME_KEY);
         score = bundle.getInt(SCORE_KEY);
 
-//checks if the user answered correct the question
+//checks if the user answered correctly the question
         checkAnswer();
 
 
@@ -50,9 +50,10 @@ public class Question1Activity extends AppCompatActivity {
         question1 = findViewById(R.id.q1);
         if (question1.getCheckedRadioButtonId() == R.id.q1a) {
             score += 1;}
-            else if (question1.getCheckedRadioButtonId() == R.id.q1b){
+            else {
             Toast.makeText(getApplicationContext(), getString(R.string.wrong_answer),
                     Toast.LENGTH_SHORT).show();
+
             // ask how to make the toast show only when one of the other answers is checked
         }
 
