@@ -54,6 +54,7 @@ public class Question1Activity extends AppCompatActivity {
         score = savedInstanceState.getInt("score");
     }
         public void onNextButtonClicked (View view){
+            checkAnswer();
                 Intent question2Intent = new Intent(Question1Activity.this, Question2Activity.class);
                 Bundle bundle = new Bundle();
                 bundle.putString(NAME_KEY, name);
