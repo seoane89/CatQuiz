@@ -25,9 +25,7 @@ public class Question1Activity extends AppCompatActivity {
         name = bundle.getString(NAME_KEY);
         score = bundle.getInt(SCORE_KEY);
 
-//checks if the user answered correctly the question
         checkAnswer();
-
 
 // Creates an onClick Listener on the next button, which opens an intent to the next question screen
 
@@ -50,12 +48,9 @@ public class Question1Activity extends AppCompatActivity {
         question1 = findViewById(R.id.q1);
         if (question1.getCheckedRadioButtonId() == R.id.q1a) {
             score += 1;}
-            else {
+            else (question1.getCheckedRadioButtonId() == R.id.q1b || question1.getCheckedRadioButtonId() == R.id.q1c || question1.getCheckedRadioButtonId() == R.id.q1d){
             Toast.makeText(getApplicationContext(), getString(R.string.wrong_answer),
-                    Toast.LENGTH_SHORT).show();
-
-            // ask how to make the toast show only when one of the other answers is checked
-        }
+                    Toast.LENGTH_SHORT).show();        }
 
     }
 //Saves the state of our intent keys and score value when the screen is rotated
