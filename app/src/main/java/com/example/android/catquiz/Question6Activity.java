@@ -20,7 +20,7 @@ public class Question6Activity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_question4);
+        setContentView(R.layout.activity_question6);
         Intent question6Intent = getIntent();
         final Bundle bundle = question6Intent.getExtras();
         name = bundle.getString(NAME_KEY);

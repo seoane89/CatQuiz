@@ -11,6 +11,9 @@ public class ResultsActivity extends AppCompatActivity {
     Bundle bundle;
     final static String SCORE_KEY = "score_key";
     final static String NAME_KEY = "name_key";
+    TextView userName;
+    TextView userScore;
+    TextView congratsMessage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,7 +23,21 @@ public class ResultsActivity extends AppCompatActivity {
         final Bundle bundle = ResultsIntent.getExtras();
         name = bundle.getString(NAME_KEY);
         score = bundle.getInt(SCORE_KEY);
-        TextView userName = findViewById(R.id.name_text);
+        userName = findViewById(R.id.name_text);
+        userScore = findViewById(R.id.score_text);
+        congratsMessage = findViewById(R.id.results_text);
+
+//creates a message to congratulate the user based on the number of correct answers
+        userName.setText(name);
+        userScore.setText(score + "/6");
+        if (score <= 4) {
+            congratsMessage.setText("You can do better, I\'m sure!");
+        }
+        if (score >= 4) {
+            congratsMessage.setText("You are a pawtastic cat expert!");
+        }
+
+
     }
     //Saves the state of our intent keys and score value when the screen is rotated
     @Override
