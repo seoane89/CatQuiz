@@ -5,43 +5,51 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
-public class Question3Activity extends AppCompatActivity {
+public class Question5Activity extends AppCompatActivity {
     public int score = MainActivity.score;
     public String name;
     Bundle bundle;
     final static String SCORE_KEY = "score_key";
     final static String NAME_KEY = "name_key";
-    RadioGroup question3;
+    CheckBox q5a, q5b, q5c, q5d;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_question3);
-        Intent question3Intent = getIntent();
-        final Bundle bundle = question3Intent.getExtras();
+        setContentView(R.layout.activity_question5);
+        Intent question5Intent = getIntent();
+        final Bundle bundle = question5Intent.getExtras();
         name = bundle.getString(NAME_KEY);
         score = bundle.getInt(SCORE_KEY);
-        question3 = findViewById(R.id.q3);
+        q5a = findViewById(R.id.q5a);
+        q5b = findViewById(R.id.q5b);
+        q5c = findViewById(R.id.q5c);
+        q5d = findViewById(R.id.q5d);
     }
     public void checkAnswer() {
-// Checks if we answered correctly
+// Checks if we selected all the correct checkboxes and adds 1 point if we did
 
-        if (question3.getCheckedRadioButtonId() == R.id.q3a) {
-            score += 1;}
+        boolean question5a = q5a.isChecked();
+        boolean question5b = q5b.isChecked();
+        boolean question5d = q5d.isChecked();
+
+        if (question5a && question5b && question5d) {
+            score = score + 1;
+        }
     }
-
 
     public void onNextButtonClicked (View view){
         checkAnswer();
-        Intent question4Intent = new Intent(Question3Activity.this, Question4Activity.class);
+        Intent question6Intent = new Intent(Question5Activity.this, Question6Activity.class);
         Bundle bundle = new Bundle();
         bundle.putString(NAME_KEY, name);
         bundle.putInt(SCORE_KEY, score);
-        question4Intent.putExtras(bundle);
-        startActivity(question4Intent);
+        question6Intent.putExtras(bundle);
+        startActivity(question6Intent);
     }
     //Saves the state of our intent keys and score value when the screen is rotated
     @Override

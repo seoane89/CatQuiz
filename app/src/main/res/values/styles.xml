@@ -9,7 +9,7 @@
     </style>
 
     <style name="LoginTextStyle" >
-    <item name="android:layout_width">wrap_content</item>
+    <item name="android:layout_width">match_parent</item>
     <item name="android:layout_height">wrap_content</item>
     <item name="android:layout_gravity">center_horizontal</item>
     <item name="android:layout_marginTop">@dimen/vertical_margin</item>
@@ -20,6 +20,7 @@
     <item name="android:textColor">@color/colorPrimaryDark</item>
     <item name="android:fontFamily">@font/architects_daughter</item>
     <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:background">@drawable/rounded_corners</item>
 </style>
 
     <style name="QuestionTextStyle" >

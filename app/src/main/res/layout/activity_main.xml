@@ -1,41 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.android.catquiz.MainActivity">
-   <RelativeLayout
-       android:layout_width="match_parent"
-       android:layout_height="match_parent">
-    <ImageView
+
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:src="@drawable/kitten_bg"
-        android:scaleType="centerCrop"
-        />
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="vertical">
-    <TextView
-        style="@style/LoginTextStyle"
-        android:paddingTop="@dimen/vertical_margin"
-        android:text="@string/hello_friends" />
-    <EditText
-        style="@style/LoginTextStyle"
-        android:id="@+id/user_name"
-        android:hint="@string/please_enter_your_name"
-        android:layout_above="@+id/start_button"
-        android:textColorHint="@color/colorPrimaryDark"
+        android:layout_height="match_parent">
 
-        />
-    <Button
-        style="@style/ButtonStyle"
-        android:id="@+id/start_button"
-        android:text="@string/start_the_quiz"
-        />
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/kitten_bg" />
 
-</LinearLayout>
-</RelativeLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/LoginTextStyle"
+                android:background="@drawable/rounded_corners"
+                android:paddingTop="@dimen/vertical_margin"
+                android:text="@string/hello_friends" />
+
+            <EditText
+                android:id="@+id/user_name"
+                style="@style/LoginTextStyle"
+                android:layout_above="@+id/start_button"
+                android:background="@drawable/rounded_corners"
+                android:hint="@string/please_enter_your_name"
+                android:textColorHint="@color/colorPrimaryDark"
+
+                />
+
+            <Button
+                android:id="@+id/start_button"
+                style="@style/ButtonStyle"
+                android:text="@string/start_the_quiz" />
+
+        </LinearLayout>
+    </RelativeLayout>
 </ScrollView>

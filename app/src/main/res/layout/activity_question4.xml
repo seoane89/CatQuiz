@@ -21,33 +21,26 @@
 
             <TextView
                 style="@style/QuestionTextStyle"
-                android:text="@string/q2" />
+                android:text="@string/q4" />
 
             <RadioGroup
-                android:id="@+id/q2"
+                android:id="@+id/q4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
                 <RadioButton
-                    android:id="@+id/q2a"
-                    style="@style/QuestionTextStyle"
-                    android:layout_width="match_parent"
+                    android:id="@+id/q4a"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/q2_a" />
+                    android:layout_gravity="center_horizontal"
+                    android:button="@drawable/q4_a_selector" />
 
                 <RadioButton
-                    android:id="@+id/q2b"
-                    style="@style/QuestionTextStyle"
-                    android:layout_width="match_parent"
+                    android:id="@+id/q4b"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/q2_b" />
-
-                <RadioButton
-                    android:id="@+id/q2c"
-                    style="@style/QuestionTextStyle"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/q2_c" />
+                    android:layout_gravity="center_horizontal"
+                    android:button="@drawable/q4_b_selector" />
             </RadioGroup>
 
             <Button

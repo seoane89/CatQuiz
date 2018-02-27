@@ -24,37 +24,24 @@ public class Question2Activity extends AppCompatActivity {
         final Bundle bundle = question2Intent.getExtras();
         name = bundle.getString(NAME_KEY);
         score = bundle.getInt(SCORE_KEY);
+        question2 = findViewById(R.id.q2);
+    }
+    public void checkAnswer() {
+// Checks if we answered correctly
 
-//checks if the user answered correct the question
-        checkAnswer();
-
-
-// Creates an onClick Listener on the next button, which opens an intent to the next question screen
-
-        Button nextButton = (Button) findViewById(R.id.next_button);
-        nextButton.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                Intent question2Intent = new Intent(Question2Activity.this, Question3Activity.class);
-                Bundle bundle = new Bundle();
-                bundle.putString(NAME_KEY, name);
-                bundle.putInt(SCORE_KEY, score);
-                question2Intent.putExtras(bundle);
-                startActivity(question2Intent);
-            }
-        });
+        if (question2.getCheckedRadioButtonId() == R.id.q2b) {
+            score += 1;}
     }
 
 
-    public void checkAnswer() {
-// Checks if we answered correctly, or else gives out a warning toast
-        question2 = findViewById(R.id.q1);
-        if (question2.getCheckedRadioButtonId() == R.id.q2a) {
-            score += 1;}
-        else {
-            Toast.makeText(getApplicationContext(), getString(R.string.wrong_answer),
-                    Toast.LENGTH_SHORT).show();
-        }
-
+    public void onNextButtonClicked (View view){
+        checkAnswer();
+        Intent question3Intent = new Intent(Question2Activity.this, Question3Activity.class);
+        Bundle bundle = new Bundle();
+        bundle.putString(NAME_KEY, name);
+        bundle.putInt(SCORE_KEY, score);
+        question3Intent.putExtras(bundle);
+        startActivity(question3Intent);
     }
     //Saves the state of our intent keys and score value when the screen is rotated
     @Override

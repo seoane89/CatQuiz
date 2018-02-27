@@ -29,16 +29,23 @@ public class Question1Activity extends AppCompatActivity {
 
 
     public void checkAnswer() {
-// Checks if we answered correctly, or else gives out a warning toast
+// Checks if we answered correctly
 
         if (question1.getCheckedRadioButtonId() == R.id.q1a) {
             score += 1;}
-        else {
-            Toast.makeText(getApplicationContext(), getString(R.string.wrong_answer),
-                    Toast.LENGTH_SHORT).show();
-        }
+              }
 
-    }
+
+        public void onNextButtonClicked (View view){
+            checkAnswer();
+                Intent question2Intent = new Intent(Question1Activity.this, Question2Activity.class);
+                Bundle bundle = new Bundle();
+                bundle.putString(NAME_KEY, name);
+                bundle.putInt(SCORE_KEY, score);
+                question2Intent.putExtras(bundle);
+                startActivity(question2Intent);
+            }
+
     //Saves the state of our intent keys and score value when the screen is rotated
     @Override
     public void onSaveInstanceState(Bundle savedInstanceState) {
@@ -53,14 +60,4 @@ public class Question1Activity extends AppCompatActivity {
         bundle = savedInstanceState.getBundle("bundle");
         score = savedInstanceState.getInt("score");
     }
-        public void onNextButtonClicked (View view){
-            checkAnswer();
-                Intent question2Intent = new Intent(Question1Activity.this, Question2Activity.class);
-                Bundle bundle = new Bundle();
-                bundle.putString(NAME_KEY, name);
-                bundle.putInt(SCORE_KEY, score);
-                question2Intent.putExtras(bundle);
-                startActivity(question2Intent);
-            }
-
 }

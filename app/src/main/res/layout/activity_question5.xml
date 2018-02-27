@@ -21,34 +21,27 @@
 
             <TextView
                 style="@style/QuestionTextStyle"
-                android:text="@string/q2" />
+                android:text="@string/q5" />
 
-            <RadioGroup
-                android:id="@+id/q2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+            <CheckBox
+                android:id="@+id/q5a"
+                style="@style/QuestionTextStyle"
+                android:text="@string/q5_a" />
 
-                <RadioButton
-                    android:id="@+id/q2a"
-                    style="@style/QuestionTextStyle"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/q2_a" />
+            <CheckBox
+                android:id="@+id/q5b"
+                style="@style/QuestionTextStyle"
+                android:text="@string/q5_b" />
 
-                <RadioButton
-                    android:id="@+id/q2b"
-                    style="@style/QuestionTextStyle"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/q2_b" />
+            <CheckBox
+                android:id="@+id/q5c"
+                style="@style/QuestionTextStyle"
+                android:text="@string/q5_c" />
 
-                <RadioButton
-                    android:id="@+id/q2c"
-                    style="@style/QuestionTextStyle"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/q2_c" />
-            </RadioGroup>
+            <CheckBox
+                android:id="@+id/q5d"
+                style="@style/QuestionTextStyle"
+                android:text="@string/q5_d" />
 
             <Button
                 android:id="@+id/next_button"

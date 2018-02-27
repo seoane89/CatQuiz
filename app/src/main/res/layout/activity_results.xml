@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.android.catquiz.MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/kitten_bg" />
+
+        <TextView
+            android:id="@+id/name_text"
+            style="@style/LoginTextStyle"
+            android:paddingTop="@dimen/vertical_margin"
+            android:text="name" />
+
+        <TextView
+            android:id="@+id/score_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:textSize="60sp"
+            android:textColor="@color/white"
+            android:layout_below="@+id/name_text"
+            android:text="0/6" />
+
+        <TextView
+            android:id="@+id/results_text"
+            style="@style/LoginTextStyle"
+            android:layout_below="@id/score_text"
+            android:paddingTop="@dimen/vertical_margin"
+            android:text="Congratulations! You got" />
+
+        <Button
+            android:id="@+id/reset_button"
+            style="@style/ButtonStyle"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/results_text"
+            android:layout_margin="@dimen/vertical_margin"
+            android:text="Reset" />
+
+        <Button
+            android:id="@+id/share_button"
+            style="@style/ButtonStyle"
+            android:layout_alignBaseline="@id/reset_button"
+            android:layout_alignParentRight="true"
+            android:layout_margin="@dimen/vertical_margin"
+            android:text="Share" />
+
+
+    </RelativeLayout>
+</ScrollView>

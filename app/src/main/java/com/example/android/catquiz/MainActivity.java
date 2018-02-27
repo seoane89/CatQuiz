@@ -13,7 +13,7 @@ public class MainActivity extends AppCompatActivity {
 
     EditText userNameInput;
     public static int score = 0;
-    public static String name = "";
+    public static String name;
     final static String SCORE_KEY = "score_key";
     final static String NAME_KEY = "name_key";
 

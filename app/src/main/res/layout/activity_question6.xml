@@ -21,34 +21,21 @@
 
             <TextView
                 style="@style/QuestionTextStyle"
-                android:text="@string/q2" />
+                android:text="@string/q6" />
 
-            <RadioGroup
-                android:id="@+id/q2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/vertical_margin"
+                android:background="@drawable/rounded_corners"
+                android:src="@drawable/bengal_cat" />
 
-                <RadioButton
-                    android:id="@+id/q2a"
-                    style="@style/QuestionTextStyle"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/q2_a" />
-
-                <RadioButton
-                    android:id="@+id/q2b"
-                    style="@style/QuestionTextStyle"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/q2_b" />
-
-                <RadioButton
-                    android:id="@+id/q2c"
-                    style="@style/QuestionTextStyle"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/q2_c" />
-            </RadioGroup>
+            <EditText
+                android:id="@+id/q6_answer"
+                style="@style/LoginTextStyle"
+                android:background="@drawable/rounded_corners"
+                android:hint="@string/q6_hint"
+                android:textColorHint="@color/colorPrimaryDark" />
 
             <Button
                 android:id="@+id/next_button"

@@ -8,44 +8,38 @@
     <string name="q1_d">8</string>
 
     <string name="q2">2. Do cats have fewer teeth than dogs have, or more?</string>
-    <string name="q2_a">Fewer*</string>
-    <string name="q2_b">The same</string>
+    <string name="q2_a">The same</string>
+    <string name="q2_b">Fewer*</string>
     <string name="q2_c">More</string>
 
     <string name="q3">3. Which brain is the cat’s brain most similar to?</string>
     <string name="q3_a">Human\'s*</string>
     <string name="q3_b">Dog\'s</string>
 
-    <string name="q4">4. A term for a group of cats is:</string>
-    <string name="q4_a">Clowder*</string>
-    <string name="q4_b">Covey</string>
-    <string name="q4_c">Clutch</string>
-    <string name="q4_d">Caggle</string>
+    <string name="q4">4. Cats can\'t taste this:</string>
+    <string name="q4_a">Salt</string>
+    <string name="q4_b">Sweet</string>
+    <string name="q4_c">Bitter</string>
+    <string name="q4_d">Sour</string>
 
-    <string name="q5">5. A cat, standing in a still position, can jump up to 6 times its own length.</string>
-    <string name="q5_a">False</string>
-    <string name="q5_b">True*</string>
+    <string name="q5">5. Which of the following are the names of cat breeds:</string>
+    <string name="q5_a">Burmilla*</string>
+    <string name="q5_b">Birman*</string>
+    <string name="q5_c">Beauceron</string>
+    <string name="q5_d">Balinese*</string>
 
-    <string name="q6">6. “Tabby” is the name of a cat breed.</string>
-    <string name="q6_a">False*</string>
-    <string name="q6_b">True</string>
+    <string name="q6">6. And finally what breed is this cat?</string>
 
-    <string name="q7">7. Which of the following are the names of cat breeds:</string>
-    <string name="q7_a">Burmilla*</string>
-    <string name="q7_b">Birman*</string>
-    <string name="q7_c">Balinese*</string>
-    <string name="q7_d">Beauceron</string>
 
-    <string name="q8">8. Cats can\'t taste this:</string>
-    <string name="q8_a">Salt</string>
-    <string name="q8_b">Sweet</string>
-    <string name="q8_c">Bitter</string>
-    <string name="q8_d">Sour</string>
     <string name="start_the_quiz">Start the Quiz!</string>
     <string name="please_enter_your_name">Please enter your name</string>
     <string name="next">Next</string>
     <string name="hello_friends">Hello Friends!\n \n Think you know all there is to know about cats? Take this quiz and see!</string>
     <string name="wrong_answer">Ooops, try again</string>
+    <string name="q6_hint">Type in the cat breed here</string>
+    <string name="q6_1">bengal</string>
+    <string name="q6_2">bengal cat</string>
+    <string name="q6_3">bengal kitten</string>
 
 
 </resources>

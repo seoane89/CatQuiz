@@ -3,45 +3,24 @@ package com.example.android.catquiz;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
-import android.widget.RadioGroup;
-import android.widget.Toast;
+import android.widget.TextView;
 
-public class Question3Activity extends AppCompatActivity {
+public class ResultsActivity extends AppCompatActivity {
     public int score = MainActivity.score;
     public String name;
     Bundle bundle;
     final static String SCORE_KEY = "score_key";
     final static String NAME_KEY = "name_key";
-    RadioGroup question3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_question3);
-        Intent question3Intent = getIntent();
-        final Bundle bundle = question3Intent.getExtras();
+        setContentView(R.layout.activity_results);
+        Intent ResultsIntent = getIntent();
+        final Bundle bundle = ResultsIntent.getExtras();
         name = bundle.getString(NAME_KEY);
         score = bundle.getInt(SCORE_KEY);
-        question3 = findViewById(R.id.q3);
-    }
-    public void checkAnswer() {
-// Checks if we answered correctly
-
-        if (question3.getCheckedRadioButtonId() == R.id.q3a) {
-            score += 1;}
-    }
-
-
-    public void onNextButtonClicked (View view){
-        checkAnswer();
-        Intent question4Intent = new Intent(Question3Activity.this, Question4Activity.class);
-        Bundle bundle = new Bundle();
-        bundle.putString(NAME_KEY, name);
-        bundle.putInt(SCORE_KEY, score);
-        question4Intent.putExtras(bundle);
-        startActivity(question4Intent);
+        TextView userName = findViewById(R.id.name_text);
     }
     //Saves the state of our intent keys and score value when the screen is rotated
     @Override
@@ -56,4 +35,5 @@ public class Question3Activity extends AppCompatActivity {
         super.onRestoreInstanceState(savedInstanceState);
         bundle = savedInstanceState.getBundle("bundle");
         score = savedInstanceState.getInt("score");
-    }}
+    }
+}
