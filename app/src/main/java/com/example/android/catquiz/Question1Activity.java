@@ -24,36 +24,22 @@ public class Question1Activity extends AppCompatActivity {
         final Bundle bundle = question1Intent.getExtras();
         name = bundle.getString(NAME_KEY);
         score = bundle.getInt(SCORE_KEY);
-
-        checkAnswer();
-
-// Creates an onClick Listener on the next button, which opens an intent to the next question screen
-
-        Button nextButton = (Button) findViewById(R.id.next_button);
-        nextButton.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                Intent question2Intent = new Intent(Question1Activity.this, Question2Activity.class);
-                Bundle bundle = new Bundle();
-                bundle.putString(NAME_KEY, name);
-                bundle.putInt(SCORE_KEY, score);
-                question2Intent.putExtras(bundle);
-                startActivity(question2Intent);
-            }
-        });
+        question1 = findViewById(R.id.q1);
     }
 
 
     public void checkAnswer() {
 // Checks if we answered correctly, or else gives out a warning toast
-        question1 = findViewById(R.id.q1);
+
         if (question1.getCheckedRadioButtonId() == R.id.q1a) {
             score += 1;}
-            else (question1.getCheckedRadioButtonId() == R.id.q1b || question1.getCheckedRadioButtonId() == R.id.q1c || question1.getCheckedRadioButtonId() == R.id.q1d){
+        else {
             Toast.makeText(getApplicationContext(), getString(R.string.wrong_answer),
-                    Toast.LENGTH_SHORT).show();        }
+                    Toast.LENGTH_SHORT).show();
+        }
 
     }
-//Saves the state of our intent keys and score value when the screen is rotated
+    //Saves the state of our intent keys and score value when the screen is rotated
     @Override
     public void onSaveInstanceState(Bundle savedInstanceState) {
         super.onSaveInstanceState(savedInstanceState);
@@ -66,4 +52,14 @@ public class Question1Activity extends AppCompatActivity {
         super.onRestoreInstanceState(savedInstanceState);
         bundle = savedInstanceState.getBundle("bundle");
         score = savedInstanceState.getInt("score");
-    }}
+    }
+        public void onNextButtonClicked (View view){
+                Intent question2Intent = new Intent(Question1Activity.this, Question2Activity.class);
+                Bundle bundle = new Bundle();
+                bundle.putString(NAME_KEY, name);
+                bundle.putInt(SCORE_KEY, score);
+                question2Intent.putExtras(bundle);
+                startActivity(question2Intent);
+            }
+
+}
