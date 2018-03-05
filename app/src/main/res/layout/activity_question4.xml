@@ -23,8 +23,11 @@
 
             <RadioGroup
                 android:id="@+id/q4"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:background="@drawable/rounded_corners"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="@dimen/vertical_margin">
 
                 <RadioButton
                     android:id="@+id/q4a"

@@ -2,31 +2,29 @@
     <string name="app_name">Cat Quiz</string>
 
     <string name="q1">1. A cat has how many whiskers, on average?</string>
-    <string name="q1_a">24*</string>
+    <string name="q1_a">24</string>
     <string name="q1_b">16</string>
     <string name="q1_c">12</string>
     <string name="q1_d">8</string>
 
     <string name="q2">2. Do cats have fewer teeth than dogs have, or more?</string>
     <string name="q2_a">The same</string>
-    <string name="q2_b">Fewer*</string>
+    <string name="q2_b">Fewer</string>
     <string name="q2_c">More</string>
 
     <string name="q3">3. Which brain is the cat’s brain most similar to?</string>
-    <string name="q3_a">Human\'s*</string>
+    <string name="q3_a">Human\'s</string>
     <string name="q3_b">Dog\'s</string>
 
     <string name="q4">4. Cats can\'t taste this:</string>
     <string name="q4_a">Salt</string>
     <string name="q4_b">Sweet</string>
-    <string name="q4_c">Bitter</string>
-    <string name="q4_d">Sour</string>
 
     <string name="q5">5. Which of the following are the names of cat breeds:</string>
-    <string name="q5_a">Burmilla*</string>
-    <string name="q5_b">Birman*</string>
+    <string name="q5_a">Burmilla</string>
+    <string name="q5_b">Birman</string>
     <string name="q5_c">Beauceron</string>
-    <string name="q5_d">Balinese*</string>
+    <string name="q5_d">Balinese</string>
 
     <string name="q6">6. And finally what breed is this cat?</string>
 
