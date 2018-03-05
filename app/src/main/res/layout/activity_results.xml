@@ -19,7 +19,8 @@
             android:id="@+id/name_text"
             style="@style/LoginTextStyle"
             android:paddingTop="@dimen/vertical_margin"
-            android:text="name" />
+            android:text="name"
+            android:gravity="center_horizontal"/>
 
         <TextView
             android:id="@+id/score_text"

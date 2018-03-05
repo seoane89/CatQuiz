@@ -23,14 +23,14 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        userNameInput = findViewById(R.id.user_name);
-        name = userNameInput.getText().toString().toUpperCase();
 
 
     // Creates an onClick Listener on the start button, which opens an intent to the next quiz screen
     Button startButton = (Button) findViewById(R.id.start_button);
     startButton.setOnClickListener(new View.OnClickListener() {
         public void onClick(View v) {
+            userNameInput = findViewById(R.id.user_name);
+            name = userNameInput.getText().toString().toUpperCase();
             Intent question1Intent = new Intent(MainActivity.this, Question1Activity.class);
             Bundle bundle = new Bundle();
             bundle.putString(NAME_KEY, name);
