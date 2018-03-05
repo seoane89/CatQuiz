@@ -50,14 +50,14 @@ public class Question1Activity extends AppCompatActivity {
     @Override
     public void onSaveInstanceState(Bundle savedInstanceState) {
         super.onSaveInstanceState(savedInstanceState);
-        savedInstanceState.putBundle("bundle", bundle);
-        savedInstanceState.putInt("score", score);
+        savedInstanceState.putString(NAME_KEY, name);
+        savedInstanceState.putInt(SCORE_KEY, score);
     }
 
     @Override
     public void onRestoreInstanceState(Bundle savedInstanceState) {
         super.onRestoreInstanceState(savedInstanceState);
-        bundle = savedInstanceState.getBundle("bundle");
-        score = savedInstanceState.getInt("score");
+        name = savedInstanceState.getString(NAME_KEY);
+        score = savedInstanceState.getInt(SCORE_KEY);
     }
 }

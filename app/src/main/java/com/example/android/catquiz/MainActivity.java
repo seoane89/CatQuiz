@@ -40,5 +40,18 @@ public class MainActivity extends AppCompatActivity {
         }
     });
 }
+    //Saves the state of our intent keys and score value when the screen is rotated
+    @Override
+    public void onSaveInstanceState(Bundle savedInstanceState) {
+        super.onSaveInstanceState(savedInstanceState);
+        savedInstanceState.putString(NAME_KEY, name);
+        savedInstanceState.putInt(SCORE_KEY, score);
+    }
 
+    @Override
+    public void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        name = savedInstanceState.getString(NAME_KEY);
+        score = savedInstanceState.getInt(SCORE_KEY);
+    }
 }
