@@ -40,6 +40,8 @@
     <string name="q6_3">bengal kitten</string>
     <string name="do_better">You can do better, I\'m sure!</string>
     <string name="an_expert">You are a pawtastic cat expert!</string>
+    <string name="share_subject">Here are my Cat Quiz Results</string>
+    <string name="results_message_body">Hey check out those are my results in the Cat Quiz:</string>
 
 
 </resources>

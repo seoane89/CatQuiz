@@ -45,7 +45,8 @@
             android:layout_alignParentLeft="true"
             android:layout_below="@+id/results_text"
             android:layout_margin="@dimen/vertical_margin"
-            android:text="Reset" />
+            android:text="Reset"
+            android:onClick="startMainActivity"/>
 
         <Button
             android:id="@+id/share_button"
@@ -53,7 +54,8 @@
             android:layout_alignBaseline="@id/reset_button"
             android:layout_alignParentRight="true"
             android:layout_margin="@dimen/vertical_margin"
-            android:text="Share" />
+            android:text="Share"
+            android:onClick="shareResults"/>
 
 
     </RelativeLayout>
