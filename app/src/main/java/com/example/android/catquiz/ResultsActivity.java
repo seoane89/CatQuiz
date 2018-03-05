@@ -31,10 +31,10 @@ public class ResultsActivity extends AppCompatActivity {
         userName.setText(name);
         userScore.setText(score + "/6");
         if (score <= 4) {
-            congratsMessage.setText("You can do better, I\'m sure!");
+            congratsMessage.setText(R.string.do_better);
         }
         if (score >= 4) {
-            congratsMessage.setText("You are a pawtastic cat expert!");
+            congratsMessage.setText(R.string.an_expert);
         }
 
 

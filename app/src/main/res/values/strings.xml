@@ -40,6 +40,8 @@
     <string name="q6_1">bengal</string>
     <string name="q6_2">bengal cat</string>
     <string name="q6_3">bengal kitten</string>
+    <string name="do_better">You can do better, I\'m sure!</string>
+    <string name="an_expert">You are a pawtastic cat expert!</string>
 
 
 </resources>
