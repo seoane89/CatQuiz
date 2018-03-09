@@ -7,11 +7,11 @@ import android.view.View;
 import android.widget.EditText;
 
 public class Question6Activity extends AppCompatActivity {
+    final static String SCORE_KEY = "score_key";
+    final static String NAME_KEY = "name_key";
     public int score = MainActivity.score;
     public String name;
     Bundle bundle;
-    final static String SCORE_KEY = "score_key";
-    final static String NAME_KEY = "name_key";
     EditText question6;
 
     @Override

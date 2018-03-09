@@ -7,11 +7,11 @@ import android.view.View;
 import android.widget.RadioGroup;
 
 public class Question4Activity extends AppCompatActivity {
+    final static String SCORE_KEY = "score_key";
+    final static String NAME_KEY = "name_key";
     public int score = MainActivity.score;
     public String name;
     Bundle bundle;
-    final static String SCORE_KEY = "score_key";
-    final static String NAME_KEY = "name_key";
     RadioGroup question4;
 
     @Override

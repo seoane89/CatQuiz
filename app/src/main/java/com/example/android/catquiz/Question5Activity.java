@@ -7,11 +7,11 @@ import android.view.View;
 import android.widget.CheckBox;
 
 public class Question5Activity extends AppCompatActivity {
+    final static String SCORE_KEY = "score_key";
+    final static String NAME_KEY = "name_key";
     public int score = MainActivity.score;
     public String name;
     Bundle bundle;
-    final static String SCORE_KEY = "score_key";
-    final static String NAME_KEY = "name_key";
     CheckBox q5a, q5b, q5c, q5d;
 
     @Override

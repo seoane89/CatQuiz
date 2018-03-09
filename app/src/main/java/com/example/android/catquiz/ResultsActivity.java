@@ -2,17 +2,17 @@ package com.example.android.catquiz;
 
 import android.content.Intent;
 import android.net.Uri;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.TextView;
 
 public class ResultsActivity extends AppCompatActivity {
+    final static String SCORE_KEY = "score_key";
+    final static String NAME_KEY = "name_key";
     public int score = MainActivity.score;
     public String name;
     Bundle bundle;
-    final static String SCORE_KEY = "score_key";
-    final static String NAME_KEY = "name_key";
     TextView userName;
     TextView userScore;
     TextView congratsMessage;
@@ -41,15 +41,17 @@ public class ResultsActivity extends AppCompatActivity {
 
 
     }
+
     //creates an intent for the Reset button, that takes you back to the Main Activity
     public void startMainActivity(View view) {
         Intent startMain = new Intent(ResultsActivity.this, MainActivity.class);
         startActivity(startMain);
     }
+
     //creates an intent for the Share Results button, which takes you to an email app to share your results with your friends
     public void shareResults(View view) {
-String shareMessageBody;
-String congrMessage = congratsMessage.getText().toString();
+        String shareMessageBody;
+        String congrMessage = congratsMessage.getText().toString();
         Intent shareIntent = new Intent(Intent.ACTION_SENDTO);
         shareIntent.setType("text");
         shareIntent.setData(Uri.parse("mailto:")); // only email apps should handle this
@@ -64,6 +66,7 @@ String congrMessage = congratsMessage.getText().toString();
 
         }
     }
+
     //Saves the state of our intent keys and score value when the screen is rotated
     @Override
     public void onSaveInstanceState(Bundle savedInstanceState) {
