@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class ResultsActivity extends AppCompatActivity {
     final static String SCORE_KEY = "score_key";
@@ -29,17 +30,19 @@ public class ResultsActivity extends AppCompatActivity {
         userScore = findViewById(R.id.score_text);
         congratsMessage = findViewById(R.id.results_text);
 
-//creates a message to congratulate the user based on the number of correct answers
+        //creates a message to congratulate the user based on the number of correct answers
         userName.setText(name);
         userScore.setText(score + "/6");
-        if (score <= 4) {
-            congratsMessage.setText(R.string.do_better);
-        }
-        if (score >= 4) {
+        if(score >= 4) {
             congratsMessage.setText(R.string.an_expert);
+            Toast.makeText(getApplicationContext(), name + getString(R.string.got_right) + score + getString(R.string.congrats_toast) ,
+                    Toast.LENGTH_SHORT).show();
+
+        }else {
+            congratsMessage.setText(R.string.do_better);
+            Toast.makeText(getApplicationContext(), name + getString(R.string.got_right) + score + getString(R.string.do_better_toast) ,
+                    Toast.LENGTH_SHORT).show();
         }
-
-
     }
 
     //creates an intent for the Reset button, that takes you back to the Main Activity

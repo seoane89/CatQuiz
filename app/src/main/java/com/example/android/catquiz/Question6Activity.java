@@ -26,7 +26,7 @@ public class Question6Activity extends AppCompatActivity {
     }
 
     public void checkAnswer() {
-// Checks if we answered correctly
+    // Checks if we answered correctly
 
         String q6Answer = question6.getText().toString().toLowerCase();
         if (q6Answer.equals(getString(R.string.q6_1))) {

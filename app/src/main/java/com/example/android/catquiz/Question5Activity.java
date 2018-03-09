@@ -29,13 +29,14 @@ public class Question5Activity extends AppCompatActivity {
     }
 
     public void checkAnswer() {
-// Checks if we selected all the correct checkboxes and adds 1 point if we did
+    // Checks if we selected all the correct checkboxes and adds 1 point if we did
 
         boolean question5a = q5a.isChecked();
         boolean question5b = q5b.isChecked();
+        boolean question5c = q5c.isChecked();
         boolean question5d = q5d.isChecked();
 
-        if (question5a && question5b && question5d) {
+        if (question5a && question5b && !question5c && question5d) {
             score = score + 1;
         }
     }

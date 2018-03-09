@@ -18,19 +18,19 @@
         <TextView
             android:id="@+id/name_text"
             style="@style/LoginTextStyle"
+            android:gravity="center_horizontal"
             android:paddingTop="@dimen/vertical_margin"
-            android:text="name"
-            android:gravity="center_horizontal"/>
+            android:text="name" />
 
         <TextView
             android:id="@+id/score_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:textSize="60sp"
-            android:textColor="@color/white"
             android:layout_below="@+id/name_text"
-            android:text="0/6" />
+            android:layout_centerHorizontal="true"
+            android:text="0/6"
+            android:textColor="@color/white"
+            android:textSize="60sp" />
 
         <TextView
             android:id="@+id/results_text"
@@ -45,8 +45,8 @@
             android:layout_alignParentLeft="true"
             android:layout_below="@+id/results_text"
             android:layout_margin="@dimen/vertical_margin"
-            android:text="Reset"
-            android:onClick="startMainActivity"/>
+            android:onClick="startMainActivity"
+            android:text="Reset" />
 
         <Button
             android:id="@+id/share_button"
@@ -54,8 +54,8 @@
             android:layout_alignBaseline="@id/reset_button"
             android:layout_alignParentRight="true"
             android:layout_margin="@dimen/vertical_margin"
-            android:text="Share"
-            android:onClick="shareResults"/>
+            android:onClick="shareResults"
+            android:text="Share" />
 
 
     </RelativeLayout>

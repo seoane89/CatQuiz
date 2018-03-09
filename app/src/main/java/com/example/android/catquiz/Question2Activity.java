@@ -26,7 +26,7 @@ public class Question2Activity extends AppCompatActivity {
     }
 
     public void checkAnswer() {
-// Checks if we answered correctly
+    // Checks if we answered correctly
 
         if (question2.getCheckedRadioButtonId() == R.id.q2b) {
             score += 1;
