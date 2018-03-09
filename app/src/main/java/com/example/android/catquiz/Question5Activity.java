@@ -1,13 +1,10 @@
 package com.example.android.catquiz;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.Button;
 import android.widget.CheckBox;
-import android.widget.RadioGroup;
-import android.widget.Toast;
 
 public class Question5Activity extends AppCompatActivity {
     public int score = MainActivity.score;
@@ -30,6 +27,7 @@ public class Question5Activity extends AppCompatActivity {
         q5c = findViewById(R.id.q5c);
         q5d = findViewById(R.id.q5d);
     }
+
     public void checkAnswer() {
 // Checks if we selected all the correct checkboxes and adds 1 point if we did
 
@@ -42,7 +40,7 @@ public class Question5Activity extends AppCompatActivity {
         }
     }
 
-    public void onNextButtonClicked (View view){
+    public void onNextButtonClicked(View view) {
         checkAnswer();
         Intent question6Intent = new Intent(Question5Activity.this, Question6Activity.class);
         Bundle bundle = new Bundle();
@@ -51,6 +49,7 @@ public class Question5Activity extends AppCompatActivity {
         question6Intent.putExtras(bundle);
         startActivity(question6Intent);
     }
+
     //Saves the state of our intent keys and score value when the screen is rotated
     @Override
     public void onSaveInstanceState(Bundle savedInstanceState) {
@@ -64,4 +63,5 @@ public class Question5Activity extends AppCompatActivity {
         super.onRestoreInstanceState(savedInstanceState);
         name = savedInstanceState.getString(NAME_KEY);
         score = savedInstanceState.getInt(SCORE_KEY);
-    }}
+    }
+}

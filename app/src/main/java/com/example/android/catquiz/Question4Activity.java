@@ -1,12 +1,10 @@
 package com.example.android.catquiz;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.Button;
 import android.widget.RadioGroup;
-import android.widget.Toast;
 
 public class Question4Activity extends AppCompatActivity {
     public int score = MainActivity.score;
@@ -26,15 +24,17 @@ public class Question4Activity extends AppCompatActivity {
         score = bundle.getInt(SCORE_KEY);
         question4 = findViewById(R.id.q4);
     }
+
     public void checkAnswer() {
 // Checks if we answered correctly
 
         if (question4.getCheckedRadioButtonId() == R.id.q4b) {
-            score += 1;}
+            score += 1;
+        }
     }
 
 
-    public void onNextButtonClicked (View view){
+    public void onNextButtonClicked(View view) {
         checkAnswer();
         Intent question5Intent = new Intent(Question4Activity.this, Question5Activity.class);
         Bundle bundle = new Bundle();
@@ -43,6 +43,7 @@ public class Question4Activity extends AppCompatActivity {
         question5Intent.putExtras(bundle);
         startActivity(question5Intent);
     }
+
     //Saves the state of our intent keys and score value when the screen is rotated
     @Override
     public void onSaveInstanceState(Bundle savedInstanceState) {
@@ -56,4 +57,5 @@ public class Question4Activity extends AppCompatActivity {
         super.onRestoreInstanceState(savedInstanceState);
         name = savedInstanceState.getString(NAME_KEY);
         score = savedInstanceState.getInt(SCORE_KEY);
-    }}
+    }
+}

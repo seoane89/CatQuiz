@@ -1,13 +1,10 @@
 package com.example.android.catquiz;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
-import android.widget.RadioGroup;
-import android.widget.Toast;
 
 public class Question6Activity extends AppCompatActivity {
     public int score = MainActivity.score;
@@ -27,6 +24,7 @@ public class Question6Activity extends AppCompatActivity {
         score = bundle.getInt(SCORE_KEY);
         question6 = findViewById(R.id.q6_answer);
     }
+
     public void checkAnswer() {
 // Checks if we answered correctly
 
@@ -43,7 +41,7 @@ public class Question6Activity extends AppCompatActivity {
     }
 
 
-    public void onNextButtonClicked (View view){
+    public void onNextButtonClicked(View view) {
         checkAnswer();
         Intent resultsIntent = new Intent(Question6Activity.this, ResultsActivity.class);
         Bundle bundle = new Bundle();
@@ -52,6 +50,7 @@ public class Question6Activity extends AppCompatActivity {
         resultsIntent.putExtras(bundle);
         startActivity(resultsIntent);
     }
+
     //Saves the state of our intent keys and score value when the screen is rotated
     @Override
     public void onSaveInstanceState(Bundle savedInstanceState) {
@@ -65,4 +64,5 @@ public class Question6Activity extends AppCompatActivity {
         super.onRestoreInstanceState(savedInstanceState);
         name = savedInstanceState.getString(NAME_KEY);
         score = savedInstanceState.getInt(SCORE_KEY);
-    }}
+    }
+}
